@@ -1,6 +1,6 @@
 # Fibonacci 
 
-##Timings for N=20
+## Timings for N=20
 
 
 | Implementation   | Time(s)     | 
