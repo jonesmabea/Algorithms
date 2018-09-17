@@ -13,7 +13,7 @@ This repository contains implementations of various algorithms. For each algorit
 8. Randomized  -->
 ##TODO 
 - [x] Fibonacci
-- [] Factorial 
+- [x] Factorial 
 - [] Search
 - [] Sorting 
 - [] Path Finding
