@@ -1,3 +1,4 @@
+import timeit
 def fibonacci(n):
     ''' 
     This is a memoized solution using a bottom up approach to the fibonacci problem. 
@@ -25,5 +26,12 @@ def fibonacci(n):
              
     return memo[n]
 
-print(fibonacci(100))
+
+def wrapper(func, *args, **kwargs):
+    def wrapped():
+        return func(*args, **kwargs)
+    return wrapped
+wrapped = wrapper(fibonacci, 100)
+print(timeit.timeit(wrapped,number=1000))
+# print(fibonacci(100))
 

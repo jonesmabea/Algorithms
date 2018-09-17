@@ -1,4 +1,6 @@
 from functools import lru_cache
+import timeit
+
 @lru_cache(maxsize=None)
 def fibonacci(n):
     ''' 
@@ -25,4 +27,10 @@ def fibonacci(n):
     else: 
         return fibonacci(n-1)+fibonacci(n-2)
 
-print(fibonacci(100))
+def wrapper(func, *args, **kwargs):
+    def wrapped():
+        return func(*args, **kwargs)
+    return wrapped
+wrapped = wrapper(fibonacci, 100)
+print(timeit.timeit(wrapped,number=1000))
+# print(fibonacci(100))

@@ -1,3 +1,6 @@
+#Author: Jones Agwata
+
+import timeit
 a,b = 0,1
 def fibonacci():
     global a,b
@@ -41,10 +44,15 @@ def extract(n,genseq):
     genseq=iter(genseq)
     for i in range(n):
         res = next(genseq)
-
     return res
 
+#Wrapper to bind function arguments before using timeit
+def wrapper(func, *args, **kwargs):
+    def wrapped():
+        return func(*args, **kwargs)
+    return wrapped
 f = fibonacci()
-print(extract(100,f))
+wrapped = wrapper(extract, 10,f)
+print(timeit.timeit(wrapped,number=1000))
     
     

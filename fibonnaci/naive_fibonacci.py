@@ -1,4 +1,6 @@
 #Author: Jones Agwata
+
+import timeit
 def fibonacci(n): 
     ''' 
     This is a simple recursive solution to the fibonacci problem. 
@@ -25,5 +27,11 @@ def fibonacci(n):
     else: 
         return fibonacci(n-1)+fibonacci(n-2)
 
-
+#Wrapper to bind function arguments before using timeit
+def wrapper(func, *args, **kwargs):
+    def wrapped():
+        return func(*args, **kwargs)
+    return wrapped
+wrapped = wrapper(fibonacci, 100)
+print(timeit.timeit(wrapped,number=1000))
 print(fibonacci(100))
