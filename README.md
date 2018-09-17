@@ -11,7 +11,6 @@ This repository contains implementations of various algorithms. For each algorit
 6. Branch and Bound
 7. Brute Force 
 8. Randomized  -->
-
 ##TODO 
 - [x] Fibonacci
 - [] Factorial 
