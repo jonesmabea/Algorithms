@@ -1,3 +1,5 @@
+#Author: Jones Agwata
+
 import timeit
 def fibonacci(n):
     ''' 
@@ -26,7 +28,7 @@ def fibonacci(n):
              
     return memo[n]
 
-
+#Wrapper for function arguments before using timeit
 def wrapper(func, *args, **kwargs):
     def wrapped():
         return func(*args, **kwargs)

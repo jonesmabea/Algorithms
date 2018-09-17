@@ -1,3 +1,5 @@
+#Author: Jones Agwata
+
 from functools import lru_cache
 import timeit
 
@@ -27,6 +29,7 @@ def fibonacci(n):
     else: 
         return fibonacci(n-1)+fibonacci(n-2)
 
+#Wrapper for function arguments before using timeit
 def wrapper(func, *args, **kwargs):
     def wrapped():
         return func(*args, **kwargs)

@@ -46,7 +46,7 @@ def extract(n,genseq):
         res = next(genseq)
     return res
 
-#Wrapper to bind function arguments before using timeit
+#Wrapper for function arguments before using timeit
 def wrapper(func, *args, **kwargs):
     def wrapped():
         return func(*args, **kwargs)
