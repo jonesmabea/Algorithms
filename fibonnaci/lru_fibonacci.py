@@ -34,6 +34,6 @@ def wrapper(func, *args, **kwargs):
     def wrapped():
         return func(*args, **kwargs)
     return wrapped
-wrapped = wrapper(fibonacci, 100)
+wrapped = wrapper(fibonacci, 20)
 print(timeit.timeit(wrapped,number=1000))
 # print(fibonacci(100))

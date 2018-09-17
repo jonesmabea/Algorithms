@@ -52,7 +52,7 @@ def wrapper(func, *args, **kwargs):
         return func(*args, **kwargs)
     return wrapped
 f = fibonacci()
-wrapped = wrapper(extract, 10,f)
+wrapped = wrapper(extract, 20,f)
 print(timeit.timeit(wrapped,number=1000))
     
     
