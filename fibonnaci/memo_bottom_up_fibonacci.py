@@ -28,12 +28,12 @@ def fibonacci(n):
              
     return memo[n]
 
-#Wrapper for function arguments before using timeit
+
+# print(fibonacci(100))#Wrapper for function arguments before using timeit
 def wrapper(func, *args, **kwargs):
     def wrapped():
         return func(*args, **kwargs)
     return wrapped
 wrapped = wrapper(fibonacci, 20)
 print(timeit.timeit(wrapped,number=1000))
-# print(fibonacci(100))
 
