@@ -17,3 +17,7 @@ This repository contains implementations of various algorithms. For each algorit
 - [] Search
 - [] Sorting 
 - [] Path Finding
+
+-[] Include time complexity
+
+ 
