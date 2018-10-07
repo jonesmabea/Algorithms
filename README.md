@@ -14,10 +14,10 @@ This repository contains implementations of various algorithms. For each algorit
 ##TODO 
 - [x] Fibonacci
 - [x] Factorial 
-- [] Search
-- [] Sorting 
-- [] Path Finding
+- [ ] Search
+- [ ] Sorting 
+- [ ] Path Finding
 
--[] Include time complexity
+- [ ] Include time complexity
 
  
